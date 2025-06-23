@@ -32,7 +32,7 @@ sistema-pmba/
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/sistema-pmba.git
+   git clone https://github.com/robsonmgomes/sistema-pmba.git
    ```
 
 2. Navegue até a pasta do projeto:
