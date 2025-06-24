@@ -93,4 +93,4 @@ Este projeto é livre para fins acadêmicos e de aprendizado.
 
 ---
 
-Desenvolvido como parte da disciplina **Imersão Profissional - Curso de Análise e Desenvolvimento de Sistemas**.
+Desenvolvido como parte da avaliação final da disciplina **Imersão Profissional - Curso de Análise e Desenvolvimento de Sistemas - Faculdade Uniasselvi**.
