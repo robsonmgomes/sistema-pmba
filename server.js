@@ -1,13 +1,10 @@
-﻿const express = require('express');         // Framework web para criar o servidor
-const mysql = require('mysql2');             // Cliente MySQL para conexão com o banco de dados
-const bodyParser = require('body-parser');   // Middleware para interpretar dados enviados via formulário
-
+﻿const express = require('express');
+const mysql = require('mysql2');
+const bodyParser = require('body-parser');
 const app = express();
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(bodyParser.urlencoded({ extended: true })); // Permite ler dados do corpo da requisição em formato URL-encoded
-app.use(express.static('public'));                   // Serve arquivos estáticos (HTML, CSS) da pasta 'public'
-
-const db = mysql.createConnection({                   // Configura a conexão com o banco de dados MySQL
+const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '',
@@ -19,17 +16,22 @@ db.connect(err => {
   console.log('Conectado ao MySQL');
 });
 
+app.use(express.static('public'));
+
 app.post('/cadastrar', (req, res) => {
-  const { nome, cpf, rg, cidade } = req.body;        // Extrai os dados enviados pelo formulário
-  const sql = 'INSERT INTO alunos (nome, cpf, rg, cidade) VALUES (?, ?, ?, ?)'; // Query SQL para inserir dados na tabela
-  db.query(sql, [nome, cpf, rg, cidade], (err) => {  // Executa a query com os dados recebidos
+  const { numero_aluno, nome, cpf, rg, cidade } = req.body;
+  const sql = 'INSERT INTO alunos (numero_aluno, nome, cpf, rg, cidade) VALUES (?, ?, ?, ?, ?)';
+  db.query(sql, [numero_aluno, nome, cpf, rg, cidade], (err) => {
     if (err) throw err;
-    res.redirect('/sucesso.html');                     // Redireciona para página de sucesso após cadastro
+    res.redirect('/sucesso.html'); // ← caminho absoluto
   });
 });
 
+
+
 app.listen(3000, () => {
-  console.log('Servidor rodando na porta 3000');       // Inicia o servidor na porta 3000
+  console.log('Servidor rodando na porta 3000');
 });
+
 
 

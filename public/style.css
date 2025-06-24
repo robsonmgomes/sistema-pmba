@@ -46,21 +46,19 @@ form button:hover {
   background-color: #007e33;
 }
 
-/* sucesso.html */
-
 .btn-voltar {
   display: block;
-  width: 100%;
-  padding: 12px;
-  background-color: #0073e6;
-  color: white;
   text-align: center;
+  background-color: #00c851;
+  color: white;
   text-decoration: none;
+  padding: 12px;
   border-radius: 6px;
   font-weight: bold;
   margin-top: 20px;
 }
 
 .btn-voltar:hover {
-  background-color: #004aad;
+  background-color: #007e33;
 }
+
