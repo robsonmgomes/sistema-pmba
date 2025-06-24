@@ -9,7 +9,7 @@ Sistema web desenvolvido para o cadastro de alunos do Curso de Formação de Sol
 - Redirecionamento para página de sucesso após o cadastro
 - Identificação de cada aluno com um campo específico de "número do aluno" (ex: Aluno 01, Aluno 12, etc.)
 
-## 🧾 Informações coletadas no formulário:
+## 🧾 Informações coletadas no formulário
 
 - Número do Aluno (ex: 01, 12, 99)
 - Nome completo
